@@ -54,7 +54,7 @@
                                 <li><i class="fi-rs-user"></i> {{ Auth::user()->name }} / 
                                 <form method="POST" action="{{route('logout')}}">
                                     @csrf
-                                <a href="{{route('logout')}}" onclick="event.preventDefault(); this.closest('form').submit();">Logout</a>
+                                <a href="{{route('logout')}}" onclick="event.preventDefault(); this.closest('form'.submit();">Logout</a>
                             </form> 
                             </li>
                             </ul>
@@ -328,9 +328,9 @@
                         <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block">
                             <nav>
                                 <ul>
-                                    <li><a class="active" href="index.html">Home </a></li>
+                                    <li><a class="active" href="/">Home </a></li>
                                     <li><a href="about.html">About</a></li>
-                                    <li><a href="shop.html">Shop</a></li>
+                                    <li><a href="{{route('shop')}}">Shop</a></li>
                                     <li class="position-static"><a href="#">Our Collections <i class="fi-rs-angle-down"></i></a>
                                         <ul class="mega-menu">
                                             <li class="sub-mega-menu sub-mega-menu-width-22">

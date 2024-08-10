@@ -58,13 +58,17 @@
                             </div>
                         </div>
                         <div class="row product-grid-3">
+
+                        @foreach($products as $product)
+
+                      
                             <div class="col-lg-4 col-md-4 col-6 col-sm-6">
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="product-details.html">
-                                                <img class="default-img" src="{{ asset ('assets/imgs/shop/product-2-1.jpg') }}" alt="">
-                                                <img class="hover-img" src="{{ asset ('assets/imgs/shop/product-2-2.jpg') }}" alt="">
+                                            <a href="{{route('product.details',['slug'=>$product->slug])}}">
+                                                <img class="default-img" src="{{ asset('assets/imgs/shop/product-')}}{{$product->id}}-1.jpg" alt="{{$product->name}}">
+                                                <img class="hover-img" src="{{ asset('assets/imgs/shop/product-') }}{{$product->id}}-2.jpg" alt="{{$product->name}}">
                                             </a>
                                         </div>
                                         <div class="product-action-1">
@@ -81,15 +85,15 @@
                                         <div class="product-category">
                                             <a href="shop.html">Music</a>
                                         </div>
-                                        <h2><a href="product-details.html">Colorful Pattern Shirts</a></h2>
+                                        <h2><a href="product-details.html">{{$product->name}}</a></h2>
                                         <div class="rating-result" title="90%">
                                             <span>
                                                 <span>90%</span>
                                             </span>
                                         </div>
                                         <div class="product-price">
-                                            <span>$238.85 </span>
-                                            <span class="old-price">$245.8</span>
+                                            <span>{{$product->price}}</span>
+                                           <!-- <span class="old-price">$245.8</span> -->
                                         </div>
                                         <div class="product-action-1 show">
                                             <a aria-label="Add To Cart" class="action-btn hover-up" href="shop-cart.php"><i class="fi-rs-shopping-bag-add"></i></a>
@@ -101,9 +105,9 @@
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="product-details.html">
-                                                <img class="default-img" src="assets/imgs/shop/product-3-1.jpg" alt="">
-                                                <img class="hover-img" src="assets/imgs/shop/product-3-2.jpg" alt="">
+                                            <a href="{{route('product.details',['slug'=>$product->slug])}}">
+                                                <img class="default-img" src="{{ asset('assets/imgs/shop/product-')}}{{$product->id}}-1.jpg" alt="">
+                                                <img class="hover-img" src="{{ asset('assets/imgs/shop/product-')}}{{$product->id}}-2.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="product-action-1">
@@ -136,13 +140,14 @@
                                     </div>
                                 </div>
                             </div>
+                            @endforeach
                             <div class="col-lg-4 col-md-4 col-6 col-sm-6">
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="product-details.html">
-                                                <img class="default-img" src="assets/imgs/shop/product-7-1.jpg" alt="">
-                                                <img class="hover-img" src="assets/imgs/shop/product-7-2.jpg" alt="">
+                                            <a href="{{route('product.details',['slug'=>$product->slug])}}">
+                                                <img class="default-img" src="{{ asset('assets/imgs/shop/product-')}}{{$product->id}}-1.jpg" alt="">
+                                                <img class="hover-img" src="{{ asset('assets/imgs/shop/product-')}}{{$product->id}}-2.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="product-action-1">
@@ -179,9 +184,9 @@
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="product-details.html">
-                                                <img class="default-img" src="assets/imgs/shop/product-1-2.jpg" alt="">
-                                                <img class="hover-img" src="assets/imgs/shop/product-1-2.jpg" alt="">
+                                            <a href="{{route('product.details',['slug'=>$product->slug])}}">
+                                                <img class="default-img" src="{{ asset('assets/imgs/shop/product-')}}{{$product->id}}-1.jpg" alt="">
+                                                <img class="hover-img" src="{{ asset('assets/imgs/shop/product-')}}{{$product->id}}-2.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="product-action-1">
@@ -218,9 +223,9 @@
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="product-details.html">
-                                                <img class="default-img" src="assets/imgs/shop/product-4-1.jpg" alt="">
-                                                <img class="hover-img" src="assets/imgs/shop/product-3-2.jpg" alt="">
+                                            <a href="{{route('product.details',['slug'=>$product->slug])}}">
+                                                <img class="default-img" src="{{ asset('assets/imgs/shop/product-')}}{{$product->id}}-1.jpg" alt="">
+                                                <img class="hover-img" src="{{ asset('assets/imgs/shop/product-')}}{{$product->id}}-1.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="product-action-1">
@@ -257,9 +262,9 @@
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="product-details.html">
-                                                <img class="default-img" src="assets/imgs/shop/product-5-2.jpg" alt="">
-                                                <img class="hover-img" src="assets/imgs/shop/product-5-2.jpg" alt="">
+                                            <a href="{{route('product.details',['slug'=>$product->slug])}}">
+                                                <img class="default-img" src="{{ asset('assets/imgs/shop/product-')}}{{$product->id}}-1.jpg" alt="">
+                                                <img class="hover-img" src="{{ asset('assets/imgs/shop/product-')}}{{$product->id}}-1.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="product-action-1">
@@ -296,9 +301,9 @@
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="product-details.html">
-                                                <img class="default-img" src="assets/imgs/shop/product-8-2.jpg" alt="">
-                                                <img class="hover-img" src="assets/imgs/shop/product-8-1.jpg" alt="">
+                                            <a href="{{route('product.details',['slug'=>$product->slug])}}">
+                                                <img class="default-img" src="{{ asset('assets/imgs/shop/product-')}}{{$product->id}}-1.jpg" alt="">
+                                                <img class="hover-img" src="{{ asset('assets/imgs/shop/product-')}}{{$product->id}}-2.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="product-action-1">
@@ -334,9 +339,9 @@
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="product-details.html">
-                                                <img class="default-img" src="assets/imgs/shop/product-11-1.jpg" alt="">
-                                                <img class="hover-img" src="assets/imgs/shop/product-11-2.jpg" alt="">
+                                            <a href="{{route('product.details',['slug'=>$product->slug])}}">
+                                                <img class="default-img" src="{{ asset('assets/imgs/shop/product-')}}{{$product->id}}-1.jpg" alt="">
+                                                <img class="hover-img" src="{{ asset('assets/imgs/shop/product-')}}{{$product->id}}-2.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="product-action-1">
@@ -370,9 +375,9 @@
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="product-details.html">
-                                                <img class="default-img" src="assets/imgs/shop/product-13-1.jpg" alt="">
-                                                <img class="hover-img" src="assets/imgs/shop/product-13-2.jpg" alt="">
+                                            <a href="{{route('product.details',['slug'=>$product->slug])}}">
+                                                <img class="default-img" src="{{ asset('assets/imgs/shop/product-')}}{{$product->id}}-1.jpg" alt="">
+                                                <img class="hover-img" src="{{ asset('assets/imgs/shop/product-')}}{{$product->id}}-2.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="product-action-1">
@@ -406,9 +411,9 @@
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="product-details.html">
-                                                <img class="default-img" src="assets/imgs/shop/product-3-1.jpg" alt="">
-                                                <img class="hover-img" src="assets/imgs/shop/product-3-2.jpg" alt="">
+                                            <a href="{{route('product.details',['slug'=>$product->slug])}}">
+                                                <img class="default-img" src="{{ asset('assets/imgs/shop/product-')}}{{$product->id}}-1.jpg" alt="">
+                                                <img class="hover-img" src="{{ asset('assets/imgs/shop/product-')}}{{$product->id}}-2.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="product-action-1">
@@ -445,9 +450,9 @@
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="product-details.html">
-                                                <img class="default-img" src="assets/imgs/shop/product-2-1.jpg" alt="">
-                                                <img class="hover-img" src="assets/imgs/shop/product-2-2.jpg" alt="">
+                                            <a href="{{route('product.details',['slug'=>$product->slug])}}">
+                                                <img class="default-img" src="{{ asset('assets/imgs/shop/product-')}}{{$product->id}}-1.jpg" alt="product image">
+                                                <img class="hover-img" src="{{ asset('assets/imgs/shop/product-')}}{{$product->id}}-2.jpg" alt=" product image">
                                             </a>
                                         </div>
                                         <div class="product-action-1">
@@ -484,9 +489,9 @@
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="product-details.html">
-                                                <img class="default-img" src="assets/imgs/shop/product-7-2.jpg" alt="">
-                                                <img class="hover-img" src="assets/imgs/shop/product-7-1.jpg" alt="">
+                                            <a href="{{route('product.details',['slug'=>$product->slug])}}">
+                                                <img class="default-img" src="{{ asset('assets/imgs/shop/product-') }}{{$product->id}}-2.jpg" alt=" Product Image">
+                                                <img class="hover-img" src="{{ asset('assets/imgs/shop/product-') }}{{$product->id}}-1.jpg" alt=" Product Image">
                                             </a>
                                         </div>
                                         <div class="product-action-1">
@@ -522,7 +527,9 @@
                         </div>
                         <!--pagination-->
                         <div class="pagination-area mt-15 mb-sm-5 mb-lg-0">
-                            <nav aria-label="Page navigation example">
+                            {{$products->links()}}
+
+                           <!--  <nav aria-label="Page navigation example">
                                 <ul class="pagination justify-content-start">
                                     <li class="page-item active"><a class="page-link" href="#">01</a></li>
                                     <li class="page-item"><a class="page-link" href="#">02</a></li>
@@ -531,7 +538,7 @@
                                     <li class="page-item"><a class="page-link" href="#">16</a></li>
                                     <li class="page-item"><a class="page-link" href="#"><i class="fi-rs-angle-double-small-right"></i></a></li>
                                 </ul>
-                            </nav>
+                            </nav> -->
                         </div>
                     </div>
                     <div class="col-lg-3 primary-sidebar sticky-sidebar">
@@ -603,7 +610,7 @@
                             </div>
                             <div class="single-post clearfix">
                                 <div class="image">
-                                    <img src="assets/imgs/shop/thumbnail-3.jpg" alt="#">
+                                    <img src="a{{ asset('ssets/imgs/shop/thumbnail-3.jpg') }}" alt="#">
                                 </div>
                                 <div class="content pt-10">
                                     <h5><a href="product-details.html">Chen Cardigan</a></h5>
@@ -615,7 +622,7 @@
                             </div>
                             <div class="single-post clearfix">
                                 <div class="image">
-                                    <img src="assets/imgs/shop/thumbnail-4.jpg" alt="#">
+                                    <img src="{{ asset('assets/imgs/shop/thumbnail-4.jpg') }}" alt="#">
                                 </div>
                                 <div class="content pt-10">
                                     <h6><a href="product-details.html">Chen Sweater</a></h6>
@@ -627,7 +634,7 @@
                             </div>
                             <div class="single-post clearfix">
                                 <div class="image">
-                                    <img src="assets/imgs/shop/thumbnail-5.jpg" alt="#">
+                                    <img src="{{ asset('assets/imgs/shop/thumbnail-5.jpg') }}" alt="#">
                                 </div>
                                 <div class="content pt-10">
                                     <h6><a href="product-details.html">Colorful Jacket</a></h6>
@@ -639,7 +646,7 @@
                             </div>
                         </div>
                         <div class="banner-img wow fadeIn mb-45 animated d-lg-block d-none">
-                            <img src="assets/imgs/banner/banner-11.jpg" alt="">
+                            <img src="{{ asset('assets/imgs/banner/banner-11.jpg') }}" alt="">
                             <div class="banner-text">
                                 <span>Women Zone</span>
                                 <h4>Save 17% on <br>Office Dress</h4>
