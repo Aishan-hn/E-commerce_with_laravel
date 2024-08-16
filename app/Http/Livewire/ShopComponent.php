@@ -10,7 +10,7 @@ class ShopComponent extends Component
 {
     public function render()
     {
-        $products = Product::paginate(8);
+        $products = Product::paginate(6);
         return view('livewire.shop-component',['products'=>$products]);
     }
 }
